@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context path="/3" docBase="./3" debug="1" reloadable="false">
+
+    <Environment name="logActiveFileOutput" value="true" type="java.lang.String" override="false" />
+    <Environment name="logName" value="D:\\devops\\maven\\practice1\\3\\target\\3.log" type="java.lang.String" override="false" />
+    <Environment name="logFileRotatePattern" value="D:\\devops\\maven\\practice1\\3\\target\\3_logs\\3_logs\\3-%i.log.gz" type="java.lang.String" override="false" />
+    <Environment name="logLevel" value="INFO" type="java.lang.String" override="false" />
+    <Environment name="logFileSize" value="10485760" type="java.lang.String" override="false" />
+    <Environment name="logFilesCount" value="10" type="java.lang.String" override="false" />
+
+    <Environment name="configVersion" value="production" type="java.lang.String" override="false" />
+
+    <Environment name="applicationBaseURL" value="https://localhost:8080/3/" type="java.lang.String" override="false" />
+    <Environment name="resourceRootURL" value="/3/resources/" type="java.lang.String" override="false" />
+    <Environment name="protectedResourceRootURL" value="/3/protected/" type="java.lang.String" override="false" />
+
+    <Environment name="resourceDiskRootFolder" value="D:\\devops\\maven\\practice1\\3\\src\\main\\webapp\\resources" type="java.lang.String" override="false" />
+    <Environment name="protectedResourceDiskRootFolder" value="D:\\devops\\maven\\practice1\\3\\src\\main\\webapp\\protected" type="java.lang.String" override="false" />
+
+    <Environment name="indexDiskRootFolder" value="D:\\devops\\maven\\practice1\\3\\target\\temp\\indexdir" type="java.lang.String" override="false" />
+    
+    <Environment name="portDataSourceClassName" value="org.apache.derby.jdbc.EmbeddedDriver" type="java.lang.String" override="false" />
+    <Environment name="servDataSourceClassName" value="org.apache.derby.jdbc.EmbeddedDriver" type="java.lang.String" override="false" />
+	
+    <Resource name="jdbc/portDataSource" auth="Container"
+              type="javax.sql.DataSource" driverClassName="org.apache.derby.jdbc.EmbeddedDriver"
+              maxActive="8" maxIdle="4"
+              username="agile" password="agile"
+              url="jdbc:derby:D:\\devops\\maven\\practice1\\3\\target/derby/production/3Port;create=true" />
+
+    <Resource name="jdbc/servDataSource" auth="Container"
+              type="javax.sql.DataSource" driverClassName="org.apache.derby.jdbc.EmbeddedDriver"
+              maxActive="8" maxIdle="4"
+              username="agile" password="agile"
+              url="jdbc:derby:D:\\devops\\maven\\practice1\\3\\target/derby/production/3Serv;create=true" />
+</Context>
